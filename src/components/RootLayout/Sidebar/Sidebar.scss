@@ -2,7 +2,7 @@
   width: 70px;
 
   @media (min-width: 768px) {
-    width: 200px;
+    width: 120px;
   }
 
   @media (min-width: 992px) {
@@ -21,7 +21,7 @@
       grid-template-columns: 100%;
       gap: 1em;
 
-      @media (min-width: 768px) {
+      @media (min-width: 992px) {
         grid-template-columns: 30% 1fr;
       }
 
@@ -29,7 +29,7 @@
         margin-left: auto;
         margin-right: auto;
 
-        @media (min-width: 768px) {
+        @media (min-width: 992px) {
           margin-right: 0;
         }
       }

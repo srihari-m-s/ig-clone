@@ -1,4 +1,4 @@
-import { Stack } from "react-bootstrap";
+import { OverlayTrigger, Stack, Tooltip } from "react-bootstrap";
 import "./Sidebar.scss";
 import { Link } from "react-router-dom";
 import {
@@ -44,8 +44,8 @@ export default function Sidebar() {
     <div className="sidebar-wrapper d-flex vh-100">
       <Stack gap={4} className="border-end gap-3 pt-5">
         <div className="align-self-center mb-5">
-          <InstagramLogo className="d-none d-md-block" />
-          <InstagramMobileLogo className="d-block d-md-none" />
+          <InstagramLogo className="d-none d-lg-block" />
+          <InstagramMobileLogo className="d-block d-lg-none" />
           {/* <Image src="/logo.png" fluid /> */}
         </div>
 
@@ -57,8 +57,18 @@ export default function Sidebar() {
               key={index}
             >
               <div className="nav-item align-items-center">
-                <span className="nav-icon">{item.icon}</span>
-                <span className="nav_link_text d-none d-md-block">
+                <OverlayTrigger
+                  placement="right"
+                  delay={{ show: 500, hide: 250 }}
+                  overlay={
+                    <Tooltip id="sidebar-tooltip" className="d-md-none">
+                      {item.text}
+                    </Tooltip>
+                  }
+                >
+                  <span className="nav-icon">{item.icon}</span>
+                </OverlayTrigger>
+                <span className="nav_link_text d-none d-lg-block">
                   {item.text}
                 </span>
               </div>
@@ -75,7 +85,7 @@ export default function Sidebar() {
             <span className="nav-icon">
               <FiLogOut size={"28px"} />
             </span>
-            <span className="nav_link_text d-none d-md-block">{"Logout"}</span>
+            <span className="nav_link_text d-none d-lg-block">{"Logout"}</span>
           </div>
         </Link>
       </Stack>

@@ -1,10 +1,9 @@
-import MaxWidthWrapper from "../../../layouts/MaxWidthWrapper/MaxWidthWrapper";
 import AuthForm from "../../../components/AuthForm/AuthForm";
-import { Image, Stack } from "react-bootstrap";
+import { Container, Image, Stack } from "react-bootstrap";
 
 export default function AuthPage() {
   return (
-    <MaxWidthWrapper>
+    <Container>
       <div className="d-flex justify-content-center align-items-center vh-100">
         <Stack
           direction="horizontal"
@@ -16,6 +15,6 @@ export default function AuthPage() {
           <AuthForm />
         </Stack>
       </div>
-    </MaxWidthWrapper>
+    </Container>
   );
 }
