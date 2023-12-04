@@ -1,0 +1,28 @@
+.sidebar-wrapper {
+  width: 70px;
+
+  @media (min-width: 768px) {
+    width: 240px;
+  }
+
+  .nav__link {
+    &.active {
+      color: var(--bs-startup) !important;
+    }
+
+    .nav-item {
+      display: grid;
+      grid-template-columns: 30% 1fr;
+      gap: 1em;
+
+      .nav-icon {
+        margin-left: auto;
+      }
+
+      .nav_link_text {
+        vertical-align: middle;
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
