@@ -1,8 +1,8 @@
 export const InstagramLogo = (props) => (
   <svg
     aria-label="Instagram"
-    color="rgb(245, 245, 245)"
-    fill="rgb(245, 245, 245)"
+    color="currentColor"
+    fill="currentColor"
     height="29"
     role="img"
     viewBox="32 4 113 32"
@@ -21,8 +21,8 @@ export const InstagramLogo = (props) => (
 export const InstagramMobileLogo = (props) => (
   <svg
     aria-label="Instagram"
-    color="rgb(245, 245, 245)"
-    fill="rgb(245, 245, 245)"
+    color="currentColor"
+    fill="currentColor"
     height="24"
     role="img"
     viewBox="0 0 24 24"
@@ -37,8 +37,8 @@ export const InstagramMobileLogo = (props) => (
 export const SearchLogo = (props) => (
   <svg
     aria-label="Search"
-    color="rgb(245, 245, 245)"
-    fill="rgb(245, 245, 245)"
+    color="currentColor"
+    fill="currentColor"
     height="24"
     role="img"
     viewBox="0 0 24 24"
@@ -69,8 +69,8 @@ export const SearchLogo = (props) => (
 export const ReelsLogo = (props) => (
   <svg
     aria-label="Reels"
-    color="rgb(245, 245, 245)"
-    fill="rgb(245, 245, 245)"
+    color="currentColor"
+    fill="currentColor"
     height="24"
     role="img"
     viewBox="0 0 24 24"
@@ -127,8 +127,8 @@ export const ReelsLogo = (props) => (
 export const MessagesLogo = (props) => (
   <svg
     aria-label="Messenger"
-    color="rgb(245, 245, 245)"
-    fill="rgb(245, 245, 245)"
+    color="currentColor"
+    fill="currentColor"
     height="24"
     role="img"
     viewBox="0 0 24 24"
@@ -152,8 +152,8 @@ export const MessagesLogo = (props) => (
 export const NotificationsLogo = (props) => (
   <svg
     aria-label="Notifications"
-    color="rgb(245, 245, 245)"
-    fill="rgb(245, 245, 245)"
+    color="currentColor"
+    fill="currentColor"
     height="24"
     role="img"
     viewBox="0 0 24 24"
@@ -167,8 +167,8 @@ export const NotificationsLogo = (props) => (
 export const UnlikeLogo = (props) => (
   <svg
     aria-label="Unlike"
-    color="rgb(255, 48, 64)"
-    fill="rgb(255, 48, 64)"
+    color="currentColor"
+    fill="currentColor"
     height="24"
     role="img"
     viewBox="0 0 48 48"
@@ -183,8 +183,8 @@ export const UnlikeLogo = (props) => (
 export const CreatePostLogo = (props) => (
   <svg
     aria-label="New post"
-    color="rgb(245, 245, 245)"
-    fill="rgb(245, 245, 245)"
+    color="currentColor"
+    fill="currentColor"
     height="24"
     role="img"
     viewBox="0 0 24 24"
@@ -227,8 +227,8 @@ export const CreatePostLogo = (props) => (
 export const CommentLogo = (props) => (
   <svg
     aria-label="Comment"
-    color="rgb(245, 245, 245)"
-    fill="rgb(245, 245, 245)"
+    color="currentColor"
+    fill="currentColor"
     height="24"
     role="img"
     viewBox="0 0 24 24"

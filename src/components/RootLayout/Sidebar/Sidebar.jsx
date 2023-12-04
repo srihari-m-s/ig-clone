@@ -1,6 +1,6 @@
 import { Stack } from "react-bootstrap";
 import "./Sidebar.scss";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   CreatePostLogo,
   InstagramLogo,
@@ -10,73 +10,74 @@ import {
 } from "../../../assets/constants";
 import { FaRegUser } from "react-icons/fa";
 import { GoHome } from "react-icons/go";
+import { FiLogOut } from "react-icons/fi";
+
+const sidebarLinks = [
+  {
+    icon: <GoHome size={"28px"} />,
+    text: "Home",
+    link: "/",
+  },
+  {
+    icon: <SearchLogo />,
+    text: "Search",
+  },
+  {
+    icon: <NotificationsLogo />,
+    text: "Notifications",
+    link: "",
+  },
+  {
+    icon: <CreatePostLogo />,
+    text: "Create",
+    link: "",
+  },
+  {
+    icon: <FaRegUser size={"24px"} />,
+    text: "Profile",
+    link: "",
+  },
+];
 
 export default function Sidebar() {
   return (
     <div className="sidebar-wrapper d-flex vh-100">
       <Stack gap={4} className="border-end gap-3 pt-5">
-        <div className="align-self-center">
+        <div className="align-self-center mb-5">
           <InstagramLogo className="d-none d-md-block" />
           <InstagramMobileLogo className="d-block d-md-none" />
           {/* <Image src="/logo.png" fluid /> */}
         </div>
 
-        <NavLink to={""} className="text-decoration-none text-white nav__link">
-          <div className="nav-item">
-            <span className="nav-icon">
-              <GoHome size={"28px"} />
-            </span>
-            <span className="nav_link_text">Home</span>
-          </div>
-        </NavLink>
+        {sidebarLinks.map((item, index) => {
+          return (
+            <Link
+              to={item.link || null}
+              className="text-decoration-none text-white nav__link"
+              key={index}
+            >
+              <div className="nav-item align-items-center">
+                <span className="nav-icon">{item.icon}</span>
+                <span className="nav_link_text d-none d-md-block">
+                  {item.text}
+                </span>
+              </div>
+            </Link>
+          );
+        })}
 
-        <NavLink
-          to={"search"}
-          className="text-decoration-none text-white nav__link"
+        {/* Logout */}
+        <Link
+          to={"/auth"}
+          className="text-decoration-none text-white nav__link mt-auto mb-5"
         >
-          <div className="nav-item">
+          <div className="nav-item align-items-center">
             <span className="nav-icon">
-              <SearchLogo />
+              <FiLogOut size={"28px"} />
             </span>
-            <span className="nav_link_text">Search</span>
+            <span className="nav_link_text d-none d-md-block">{"Logout"}</span>
           </div>
-        </NavLink>
-
-        <NavLink
-          to={"notifications"}
-          className="text-decoration-none text-white nav__link"
-        >
-          <div className="nav-item">
-            <span className="nav-icon">
-              <NotificationsLogo />
-            </span>
-            <span className="nav_link_text">Notifications</span>
-          </div>
-        </NavLink>
-
-        <NavLink
-          to={"create"}
-          className="text-decoration-none text-white nav__link"
-        >
-          <div className="nav-item">
-            <span className="nav-icon">
-              <CreatePostLogo />
-            </span>
-            <p className="m-0 nav_link_text">Create</p>
-          </div>
-        </NavLink>
-
-        <NavLink
-          to={"profile"}
-          className="text-decoration-none text-white nav__link"
-        >
-          <div className="nav-item">
-            <span className="nav-icon">
-              <FaRegUser size={"24px"} />
-            </span>
-            <p className="m-0 nav_link_text">Profile</p>
-          </div>
-        </NavLink>
+        </Link>
       </Stack>
     </div>
   );

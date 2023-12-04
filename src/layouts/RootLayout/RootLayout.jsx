@@ -1,5 +1,4 @@
 import { Stack } from "react-bootstrap";
-import MaxWidthWrapper from "../MaxWidthWrapper/MaxWidthWrapper";
 import Sidebar from "../../components/RootLayout/Sidebar/Sidebar";
 import { Outlet } from "react-router-dom";
 
@@ -8,9 +7,9 @@ export default function RootLayout() {
     <Stack direction="horizontal">
       {/* Sidebar */}
       <Sidebar />
-      <MaxWidthWrapper>
+      <div className="mx-auto" style={{ maxWidth: "800px" }}>
         <Outlet />
-      </MaxWidthWrapper>
+      </div>
     </Stack>
   );
 }

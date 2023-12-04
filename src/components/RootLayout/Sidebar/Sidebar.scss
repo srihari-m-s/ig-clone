@@ -2,21 +2,36 @@
   width: 70px;
 
   @media (min-width: 768px) {
+    width: 200px;
+  }
+
+  @media (min-width: 992px) {
     width: 240px;
   }
 
   .nav__link {
-    &.active {
+    padding: 0.5em;
+    &:hover {
       color: var(--bs-startup) !important;
+      // background-color: #fafafa;
     }
 
     .nav-item {
       display: grid;
-      grid-template-columns: 30% 1fr;
+      grid-template-columns: 100%;
       gap: 1em;
+
+      @media (min-width: 768px) {
+        grid-template-columns: 30% 1fr;
+      }
 
       .nav-icon {
         margin-left: auto;
+        margin-right: auto;
+
+        @media (min-width: 768px) {
+          margin-right: 0;
+        }
       }
 
       .nav_link_text {

@@ -93,12 +93,7 @@ export default function LoginForm({ isLogin }) {
 
           {/* Submit button */}
           <div className="d-grid">
-            <Button
-              variant="startup"
-              type="submit"
-              className=""
-              onClick={handleAuth}
-            >
+            <Button variant="startup" type="submit" className="">
               {isLogin ? "Login" : "Sign Up"}
             </Button>
           </div>
