@@ -1,3 +1,7 @@
 export default function PostFooter() {
-  return <div>PostFooter</div>;
+  return (
+    <div>
+      <h1>PostFooterComponent</h1>
+    </div>
+  );
 }
